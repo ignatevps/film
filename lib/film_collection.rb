@@ -1,6 +1,6 @@
 class FilmCollection
   def self.from_dir(dir_path)
-    films = Dir[dir_path + '/*.txt'].map do |file|
+    films = Dir[dir_path + '/*.md'].map do |file|
       Film.from_file(file)
     end
 

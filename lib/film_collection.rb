@@ -3,7 +3,6 @@ class FilmCollection
     films = Dir[dir_path + '/*.md'].map do |file|
       Film.from_file(file)
     end
-
   new(films)
   end
 
@@ -15,4 +14,11 @@ class FilmCollection
     @films.group_by(&:director)
   end
 
+  def directors
+    films_by_director.keys
+  end
+
+  def random_film_by_director(director)
+    films_by_director[director].sample
+  end
 end

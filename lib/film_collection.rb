@@ -3,7 +3,7 @@ class FilmCollection
     films = Dir[dir_path + '/*.md'].map do |file|
       Film.from_file(file)
     end
-  new(films)
+    new(films)
   end
 
   def initialize(films)

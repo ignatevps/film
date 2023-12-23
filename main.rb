@@ -7,7 +7,7 @@ collection.directors.each_with_index do |director, i|
   puts "#{i + 1}. #{director}"
 end
 
-puts "Enter the director number:"
+puts 'Enter the director number:'
 director_number = STDIN.gets.to_i
 director = collection.directors[director_number - 1]
 
